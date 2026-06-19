@@ -131,14 +131,14 @@
     border-radius: 4mm; overflow: hidden; margin-bottom: 4mm; display: flex;
     border: .5mm solid rgba(243,194,91,.3);
   }
-  .thali-card .pic { width: 28mm; min-width: 28mm; }
+  .thali-card .pic { width: 28mm; min-width: 28mm; position: relative; }
   .thali-card .pic img { width: 100%; height: 100%; object-fit: cover; }
   .thali-card .body { padding: 3.5mm 4mm; flex: 1; position: relative; }
   .thali-card .top { display: flex; justify-content: space-between; align-items: baseline; }
   .thali-card .top .t { font-size: 5mm; font-weight: 800; color: #fff; }
   .thali-card .top .p { font-size: 5.6mm; font-weight: 800; color: var(--gold-2); }
   .thali-card .desc { font-size: 3.5mm; color: rgba(245,233,212,.85); margin-top: 1.5mm; line-height: 1.35; }
-  .thali-card .tag { position: absolute; top: 3mm; right: 4mm; background: var(--gold); color: var(--maroon); font-size: 2.6mm; font-weight: 800; padding: .6mm 2mm; border-radius: 3mm; text-transform: uppercase; }
+  .thali-card .tag { position: absolute; top: 2.5mm; left: 2.5mm; background: var(--gold); color: var(--maroon); font-size: 2.6mm; font-weight: 800; padding: .8mm 2.2mm; border-radius: 3mm; text-transform: uppercase; letter-spacing: .3mm; box-shadow: 0 1mm 2mm rgba(0,0,0,.35); }
 
   .menu-foot { margin-top: auto; text-align: center; padding-top: 4mm; position: relative; z-index: 2; }
   .menu-foot .ord { font-size: 6mm; font-weight: 800; letter-spacing: 1.5mm; color: #fff; }
@@ -241,9 +241,8 @@
           </div>
         </div>
         <div class="thali-card">
-          <div class="pic"><img src="photos/special-veg-thali.webp" alt="Special Thali" /></div>
+          <div class="pic"><span class="tag">Bestseller</span><img src="photos/special-veg-thali.webp" alt="Special Thali" /></div>
           <div class="body">
-            <span class="tag">Bestseller</span>
             <div class="top"><span class="t">Special Thali</span><span class="p">₹190</span></div>
             <div class="desc">Dal tadka, jeera rice, mix veg, shahi paneer, 4 butter roti, achar, salad &amp; papad.</div>
           </div>
