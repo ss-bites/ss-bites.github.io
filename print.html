@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SS Bites — Printable Card & Menu</title>
+<style>
+  :root {
+    --maroon: #4a1d14;
+    --maroon-2: #6b2a1c;
+    --cream: #f5e9d4;
+    --gold: #e0a13a;
+    --gold-2: #f3c25b;
+    --dark: #241814;
+  }
+  @page { size: A4 portrait; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: var(--maroon); }
+
+  .page {
+    width: 210mm; height: 297mm; position: relative; overflow: hidden;
+    page-break-after: always; display: flex; flex-direction: column;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ============ PAGE 1 — BUSINESS CARD ============ */
+  .card-page { background: #efe1c6; justify-content: center; align-items: center; }
+  .card {
+    width: 180mm; height: 105mm; background: var(--cream); border-radius: 10mm;
+    position: relative; overflow: hidden; box-shadow: 0 6mm 16mm -6mm rgba(74,29,20,.5);
+    display: flex;
+  }
+  .card__blob { position: absolute; background: var(--maroon); opacity: .9; }
+  .card__blob--tl { width: 60mm; height: 30mm; border-radius: 0 0 40mm 0; top: 0; left: 0; }
+  .card__left { flex: 1; padding: 14mm 10mm; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+  .brand { font-size: 17mm; font-weight: 800; color: var(--maroon); line-height: .9; letter-spacing: -.5mm; }
+  .brand small { display: block; font-family: "Brush Script MT", "Segoe Script", cursive; font-weight: 400; font-size: 9mm; color: var(--maroon-2); margin-top: 1mm; }
+  .row { display: flex; align-items: flex-start; gap: 4mm; margin-top: 6mm; }
+  .row .ic { width: 8mm; height: 8mm; min-width: 8mm; border-radius: 50%; background: var(--maroon); color: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 4mm; }
+  .row .tx { font-size: 4.6mm; line-height: 1.35; color: #3a241c; padding-top: .6mm; }
+  .row .tx.phone { font-size: 6mm; font-weight: 700; color: var(--maroon); }
+  .avail { margin-top: 7mm; font-size: 3.8mm; color: #3a241c; }
+  .avail b { background: #cb202d; color: #fff; padding: .8mm 2.5mm; border-radius: 1.5mm; font-style: italic; }
+  .card__right { width: 70mm; position: relative; }
+  .card__right img { width: 100%; height: 100%; object-fit: cover; }
+  .card__right::before { content: ""; position: absolute; left: -8mm; top: 0; bottom: 0; width: 16mm; background: var(--cream); border-radius: 0 50% 50% 0 / 0 50% 50% 0; z-index: 2; }
+
+  /* ============ PAGE 2 — MENU ============ */
+  .menu-page { background: var(--dark); color: var(--cream); padding: 16mm 14mm; }
+  .menu-head { text-align: center; margin-bottom: 8mm; }
+  .menu-head h1 { font-size: 16mm; font-weight: 800; letter-spacing: 1mm; line-height: .95; }
+  .menu-head .by { font-family: "Brush Script MT", cursive; color: var(--gold-2); font-size: 8mm; }
+  .menu-head .rule { width: 40mm; height: 1.4mm; background: var(--gold); margin: 4mm auto 0; border-radius: 1mm; }
+
+  .cols { display: flex; gap: 12mm; }
+  .col { flex: 1; }
+  .cat { margin-bottom: 7mm; }
+  .cat h2 { color: var(--gold-2); font-size: 5.6mm; text-transform: uppercase; letter-spacing: .5mm; border-bottom: .5mm solid rgba(243,194,91,.35); padding-bottom: 1.5mm; margin-bottom: 3mm; }
+  .item { display: flex; align-items: baseline; font-size: 4.4mm; margin: 2.2mm 0; }
+  .item .nm { white-space: nowrap; }
+  .item .dot { flex: 1; border-bottom: .4mm dotted rgba(245,233,212,.45); margin: 0 2mm; transform: translateY(-1mm); }
+  .item .pr { color: var(--gold-2); font-weight: 700; white-space: nowrap; }
+
+  .thali-box { margin-top: 2mm; background: linear-gradient(160deg, var(--maroon), var(--maroon-2)); border-radius: 4mm; padding: 5mm; }
+  .thali-box h2 { border: none; color: var(--gold-2); }
+  .thali { margin-bottom: 4mm; }
+  .thali:last-child { margin-bottom: 0; }
+  .thali .top { display: flex; justify-content: space-between; align-items: baseline; }
+  .thali .top .t { font-size: 5mm; font-weight: 700; color: var(--cream); }
+  .thali .top .p { font-size: 5.4mm; font-weight: 800; color: var(--gold-2); }
+  .thali .desc { font-size: 3.7mm; color: rgba(245,233,212,.85); margin-top: 1mm; }
+
+  .menu-foot { margin-top: auto; text-align: center; padding-top: 8mm; }
+  .menu-foot .ord { font-size: 7mm; font-weight: 800; letter-spacing: 1mm; }
+  .menu-foot .ph { font-size: 8mm; font-weight: 800; color: var(--gold-2); margin-top: 1mm; }
+  .menu-foot .addr { font-size: 3.6mm; color: rgba(245,233,212,.8); margin-top: 3mm; }
+</style>
+</head>
+<body>
+
+  <!-- ===== PAGE 1: Business Card ===== -->
+  <section class="page card-page">
+    <div class="card">
+      <div class="card__blob card__blob--tl"></div>
+      <div class="card__left">
+        <div class="brand">SS Bites<small>by Shivangi</small></div>
+        <div class="row">
+          <span class="ic">✆</span>
+          <span class="tx phone">+91 96461 10042</span>
+        </div>
+        <div class="row">
+          <span class="ic">⌖</span>
+          <span class="tx">Dankinganj, Pairiya Tola, Lanka,<br/>Near Ganesh Mandir, Mirzapur,<br/>Uttar Pradesh</span>
+        </div>
+        <div class="avail">Available on: <b>zomato</b> &nbsp;or order from us offline</div>
+      </div>
+      <div class="card__right">
+        <img src="photos/special-veg-thali.webp" alt="Food" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGE 2: Menu ===== -->
+  <section class="page menu-page">
+    <div class="menu-head">
+      <h1>SS BITES MENU</h1>
+      <div class="by">by Shivangi</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="cols">
+      <div class="col">
+        <div class="cat">
+          <h2>Maggi</h2>
+          <div class="item"><span class="nm">Plain Maggi</span><span class="dot"></span><span class="pr">₹59</span></div>
+          <div class="item"><span class="nm">Veg Maggi</span><span class="dot"></span><span class="pr">₹69</span></div>
+          <div class="item"><span class="nm">Corn Maggi</span><span class="dot"></span><span class="pr">₹89</span></div>
+          <div class="item"><span class="nm">Cheese Maggi</span><span class="dot"></span><span class="pr">₹99</span></div>
+          <div class="item"><span class="nm">Aata Maggi</span><span class="dot"></span><span class="pr">₹99</span></div>
+        </div>
+        <div class="cat">
+          <h2>Sandwich &amp; Burger</h2>
+          <div class="item"><span class="nm">Sandwich</span><span class="dot"></span><span class="pr">₹59</span></div>
+          <div class="item"><span class="nm">Corn Sandwich</span><span class="dot"></span><span class="pr">₹79</span></div>
+          <div class="item"><span class="nm">Burger</span><span class="dot"></span><span class="pr">₹59</span></div>
+          <div class="item"><span class="nm">Aloo Paratha with Chutney</span><span class="dot"></span><span class="pr">₹59</span></div>
+        </div>
+        <div class="cat">
+          <h2>Rice &amp; Noodles</h2>
+          <div class="item"><span class="nm">Veg Fried Rice</span><span class="dot"></span><span class="pr">₹99</span></div>
+          <div class="item"><span class="nm">Paneer Fried Rice</span><span class="dot"></span><span class="pr">₹119</span></div>
+          <div class="item"><span class="nm">Veg Noodles</span><span class="dot"></span><span class="pr">₹89</span></div>
+          <div class="item"><span class="nm">Paneer Hakka Noodles</span><span class="dot"></span><span class="pr">₹119</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="cat">
+          <h2>Snacks &amp; Sides</h2>
+          <div class="item"><span class="nm">French Fries</span><span class="dot"></span><span class="pr">₹59</span></div>
+          <div class="item"><span class="nm">Sweet Corn</span><span class="dot"></span><span class="pr">₹69</span></div>
+          <div class="item"><span class="nm">Poha</span><span class="dot"></span><span class="pr">₹69</span></div>
+          <div class="item"><span class="nm">Macroni</span><span class="dot"></span><span class="pr">₹69</span></div>
+          <div class="item"><span class="nm">White Sauce Pasta</span><span class="dot"></span><span class="pr">₹129</span></div>
+        </div>
+        <div class="thali-box">
+          <h2>Thali Specials</h2>
+          <div class="thali">
+            <div class="top"><span class="t">Veg Thali</span><span class="p">₹150</span></div>
+            <div class="desc">Dal fry, rice, bhujiya, 4 roti &amp; achar</div>
+          </div>
+          <div class="thali">
+            <div class="top"><span class="t">Special Thali</span><span class="p">₹190</span></div>
+            <div class="desc">Dal tadka, jeera rice, mix veg, shahi paneer, 4 butter roti, achar, salad &amp; papad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-foot">
+      <div class="ord">ORDER ONLINE</div>
+      <div class="ph">+91 96461 10042</div>
+      <div class="addr">Dankinganj, Pairiya Tola, Lanka, Near Ganesh Mandir, Mirzapur, Uttar Pradesh</div>
+    </div>
+  </section>
+
+</body>
+</html>
