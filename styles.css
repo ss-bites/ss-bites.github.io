@@ -54,6 +54,9 @@ img, iframe { max-width: 100%; display: block; }
 .btn--primary:hover { background: var(--maroon-2); }
 .btn--ghost { background: transparent; color: var(--maroon); border: 2px solid var(--maroon); }
 .btn--ghost:hover { background: var(--maroon); color: var(--cream); }
+/* Ghost button on dark hero needs light colors to stay visible */
+.hero .btn--ghost { color: var(--cream); border-color: var(--cream); }
+.hero .btn--ghost:hover { background: var(--cream); color: var(--maroon); border-color: var(--cream); }
 .btn--zomato { background: #cb202d; color: #fff; box-shadow: 0 14px 30px -14px rgba(203, 32, 45, 0.7); }
 .btn--zomato:hover { background: #e23744; }
 
