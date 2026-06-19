@@ -1,0 +1,7 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor settings (optional — remove if you want to keep them)
+.vscode/

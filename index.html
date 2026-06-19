@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SS Bites by Shivangi — Maggi, sandwiches, burgers, fried rice, noodles, thalis and more. Dankinganj, Mirzapur, Uttar Pradesh." />
+  <title>SS Bites by Shivangi | Café & Thali Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top nav -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand">SS&nbsp;Bites</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#menu">Menu</a>
+        <a href="#thali">Thali Special</a>
+        <a href="#visit">Visit Us</a>
+        <a href="#order" class="nav__cta">Order Now</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__floaters" aria-hidden="true">
+      <span class="floater" style="--x:8%;--d:0s;--t:16s">🍔</span>
+      <span class="floater" style="--x:22%;--d:3s;--t:20s">🍟</span>
+      <span class="floater" style="--x:42%;--d:6s;--t:18s">🍜</span>
+      <span class="floater" style="--x:63%;--d:1.5s;--t:22s">🥪</span>
+      <span class="floater" style="--x:80%;--d:4.5s;--t:17s">🍛</span>
+      <span class="floater" style="--x:92%;--d:2s;--t:21s">🥤</span>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow pop" style="--delay:.1s">Available on Zomato &amp; offline</p>
+      <h1 class="hero__title pop" style="--delay:.25s">SS Bites</h1>
+      <p class="hero__script pop" style="--delay:.45s">by Shivangi</p>
+      <p class="hero__tag pop" style="--delay:.6s">Fresh Maggi, sizzling burgers, loaded thalis &amp; more — made with love in Mirzapur.</p>
+      <div class="hero__actions pop" style="--delay:.75s">
+        <a href="#menu" class="btn btn--primary">View Menu</a>
+        <a href="#order" class="btn btn--ghost">Order Now</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="strip">
+    <div class="strip__item"><span>🍔</span> Burgers &amp; Sandwiches</div>
+    <div class="strip__item"><span>🍜</span> Maggi &amp; Noodles</div>
+    <div class="strip__item"><span>🍛</span> Thali Specials</div>
+    <div class="strip__item"><span>🥤</span> Chilled Beverages</div>
+  </section>
+
+  <!-- Thali Special (the new additions, featured) -->
+  <section class="thali" id="thali">
+    <div class="section-head reveal">
+      <p class="section-head__kicker">New &amp; Fresh</p>
+      <h2 class="section-head__title">Thali Specials</h2>
+      <p class="section-head__sub">Wholesome, home-style meals — perfect for a full lunch.</p>
+    </div>
+    <div class="thali__grid">
+      <article class="thali-card reveal">
+        <div class="thali-card__media">
+          <img src="photos/veg-thali.webp" alt="Veg thali with dal, rice and roti" loading="lazy" />
+        </div>
+        <div class="thali-card__body">
+          <div class="thali-card__top">
+            <h3>Veg Thali</h3>
+            <span class="price">₹150</span>
+          </div>
+          <p class="thali-card__desc">Dal fry, rice, bhujiya, 4 roti &amp; achar.</p>
+          <ul class="thali-card__items">
+            <li>Dal Fry</li><li>Rice</li><li>Bhujiya</li><li>Roti ×4</li><li>Achar</li>
+          </ul>
+        </div>
+      </article>
+      <article class="thali-card thali-card--special reveal">
+        <span class="badge">Bestseller</span>
+        <div class="thali-card__media">
+          <img src="photos/special-veg-thali.webp" alt="Special veg thali with paneer, mix veg and more" loading="lazy" />
+        </div>
+        <div class="thali-card__body">
+          <div class="thali-card__top">
+            <h3>Special Thali</h3>
+            <span class="price">₹190</span>
+          </div>
+          <p class="thali-card__desc">A loaded feast with paneer, mix veg &amp; more.</p>
+          <ul class="thali-card__items">
+            <li>Dal Tadka</li><li>Jeera Rice</li><li>Mix Veg</li><li>Shahi Paneer</li>
+            <li>Butter Roti ×4</li><li>Achar</li><li>Salad</li><li>Papad</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu" id="menu">
+    <div class="section-head reveal">
+      <p class="section-head__kicker">Our Menu</p>
+      <h2 class="section-head__title">Bites for Every Craving</h2>
+    </div>
+
+    <div class="menu__grid">
+      <div class="menu-group reveal">
+        <div class="menu-group__media">
+          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=800&q=80" alt="Bowl of Maggi noodles" loading="lazy" />
+        </div>
+        <h3 class="menu-group__title">🍜 Maggi</h3>
+        <ul class="menu-list">
+          <li><span>Plain Maggi</span><span class="dots"></span><span class="amt">₹59</span></li>
+          <li><span>Veg Maggi</span><span class="dots"></span><span class="amt">₹69</span></li>
+          <li><span>Corn Maggi</span><span class="dots"></span><span class="amt">₹89</span></li>
+          <li><span>Cheese Maggi</span><span class="dots"></span><span class="amt">₹99</span></li>
+          <li><span>Aata Maggi</span><span class="dots"></span><span class="amt">₹99</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-group reveal">
+        <div class="menu-group__media">
+          <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80" alt="Grilled sandwich and burger" loading="lazy" />
+        </div>
+        <h3 class="menu-group__title">🥪 Sandwich &amp; Burger</h3>
+        <ul class="menu-list">
+          <li><span>Sandwich</span><span class="dots"></span><span class="amt">₹59</span></li>
+          <li><span>Corn Sandwich</span><span class="dots"></span><span class="amt">₹79</span></li>
+          <li><span>Burger</span><span class="dots"></span><span class="amt">₹59</span></li>
+          <li><span>Aloo Paratha with Chutney</span><span class="dots"></span><span class="amt">₹59</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-group reveal">
+        <div class="menu-group__media">
+          <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&q=80" alt="Fried rice and noodles" loading="lazy" />
+        </div>
+        <h3 class="menu-group__title">🍚 Rice &amp; Noodles</h3>
+        <ul class="menu-list">
+          <li><span>Veg Fried Rice</span><span class="dots"></span><span class="amt">₹99</span></li>
+          <li><span>Paneer Fried Rice</span><span class="dots"></span><span class="amt">₹119</span></li>
+          <li><span>Veg Noodles</span><span class="dots"></span><span class="amt">₹89</span></li>
+          <li><span>Paneer Hakka Noodles</span><span class="dots"></span><span class="amt">₹119</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-group reveal">
+        <div class="menu-group__media">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80" alt="French fries and snacks" loading="lazy" />
+        </div>
+        <h3 class="menu-group__title">🍟 Snacks &amp; Sides</h3>
+        <ul class="menu-list">
+          <li><span>French Fries</span><span class="dots"></span><span class="amt">₹59</span></li>
+          <li><span>Sweet Corn</span><span class="dots"></span><span class="amt">₹69</span></li>
+          <li><span>Poha</span><span class="dots"></span><span class="amt">₹69</span></li>
+          <li><span>Macroni</span><span class="dots"></span><span class="amt">₹69</span></li>
+          <li><span>White Sauce Pasta</span><span class="dots"></span><span class="amt">₹129</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order / Contact -->
+  <section class="order" id="order">
+    <div class="order__card reveal">
+      <h2>Order Online</h2>
+      <p>Call us directly or order through Zomato. We also serve offline!</p>
+      <a href="tel:+919646110042" class="order__phone" id="phoneLink">+91 96461 10042</a>
+      <div class="order__btns">
+        <a href="tel:+919646110042" class="btn btn--primary">📞 Call to Order</a>
+        <a href="https://www.zomato.com" target="_blank" rel="noopener" class="btn btn--zomato">Order on Zomato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="visit" id="visit">
+    <div class="visit__info reveal">
+      <h2>Visit Us</h2>
+      <p class="visit__addr">
+        Dankinganj, Pairiya Tola, Lanka,<br />
+        Near Ganesh Mandir, Mirzapur,<br />
+        Uttar Pradesh
+      </p>
+      <a class="btn btn--ghost" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Ganesh+Mandir+Lanka+Mirzapur+Uttar+Pradesh">
+        Open in Maps
+      </a>
+    </div>
+    <div class="visit__map reveal">
+      <iframe
+        title="SS Bites location"
+        src="https://www.google.com/maps?q=Lanka+Mirzapur+Uttar+Pradesh&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__brand">SS Bites <span>by Shivangi</span></p>
+    <p class="footer__small">Dankinganj, Lanka, Mirzapur, UP · <a href="tel:+919646110042">+91 96461 10042</a></p>
+    <p class="footer__small">© <span id="year"></span> SS Bites. All rights reserved.</p>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
