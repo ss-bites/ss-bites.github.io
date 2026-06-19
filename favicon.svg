@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6b2a1c"/>
+      <stop offset="1" stop-color="#4a1d14"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3c25b"/>
+      <stop offset="1" stop-color="#e0a13a"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bg)"/>
+  <text x="32" y="39" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-weight="700"
+        font-size="30" fill="url(#gold)" letter-spacing="-1">SS</text>
+  <g fill="url(#gold)">
+    <!-- fork -->
+    <rect x="13" y="44" width="2.4" height="9" rx="1.2"/>
+    <rect x="11.2" y="44" width="1.4" height="4.5" rx="0.7"/>
+    <rect x="15.8" y="44" width="1.4" height="4.5" rx="0.7"/>
+    <!-- spoon -->
+    <ellipse cx="50" cy="46.5" rx="2.6" ry="3.3"/>
+    <rect x="48.8" y="49" width="2.4" height="4.5" rx="1.2"/>
+  </g>
+</svg>
