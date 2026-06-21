@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6b2a1c"/>
+      <stop offset="1" stop-color="#3c160e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3c25b"/>
+      <stop offset="1" stop-color="#d9962f"/>
+    </linearGradient>
+    <radialGradient id="cream" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#fbf2dd"/>
+      <stop offset="1" stop-color="#f0e0c1"/>
+    </radialGradient>
+    <path id="topArc" d="M 96 256 A 160 160 0 0 1 416 256" fill="none"/>
+    <path id="botArc" d="M 110 256 A 146 146 0 0 0 402 256" fill="none"/>
+  </defs>
+
+  <!-- outer maroon disc -->
+  <circle cx="256" cy="256" r="248" fill="url(#ring)"/>
+  <!-- gold ring -->
+  <circle cx="256" cy="256" r="240" fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#gold)" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+
+  <!-- inner cream medallion -->
+  <circle cx="256" cy="256" r="150" fill="url(#cream)"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#6b2a1c" stroke-width="4" opacity="0.35"/>
+
+  <!-- crossed fork & spoon behind monogram -->
+  <g stroke="#6b2a1c" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9">
+    <!-- fork -->
+    <g transform="rotate(-22 256 256)">
+      <line x1="200" y1="150" x2="200" y2="362"/>
+      <line x1="186" y1="150" x2="186" y2="196"/>
+      <line x1="214" y1="150" x2="214" y2="196"/>
+      <path d="M 178 196 Q 200 214 222 196" />
+    </g>
+    <!-- spoon -->
+    <g transform="rotate(22 256 256)">
+      <line x1="312" y1="196" x2="312" y2="362"/>
+      <ellipse cx="312" cy="172" rx="22" ry="30" fill="#6b2a1c" stroke="none"/>
+    </g>
+  </g>
+
+  <!-- SS monogram -->
+  <text x="256" y="290" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-weight="700"
+        font-size="150" fill="#4a1d14" letter-spacing="-6">SS</text>
+
+  <!-- curved top text: BITES -->
+  <text font-family="Georgia, serif" font-weight="700" font-size="46"
+        fill="url(#gold)" letter-spacing="14">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">S S&#160;&#160;B I T E S</textPath>
+  </text>
+
+  <!-- curved bottom text: BY SHIVANGI -->
+  <text font-family="Georgia, serif" font-style="italic" font-weight="400" font-size="34"
+        fill="#f3c25b" letter-spacing="6">
+    <textPath href="#botArc" startOffset="50%" text-anchor="middle">by Shivangi</textPath>
+  </text>
+
+  <!-- small star accents -->
+  <g fill="url(#gold)">
+    <circle cx="256" cy="92" r="6"/>
+    <circle cx="256" cy="420" r="5"/>
+  </g>
+</svg>
